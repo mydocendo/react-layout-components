@@ -49,7 +49,7 @@ export default class ScrollView extends PureComponent {
     this.setState({ scrollPos: scrollPosition })
   }
 
-  componentWillUpdate = () => {
+  UNSAFE_componentWillUpdate = () => {
     if (this.state.scrollPos === 'end') {
       const DOMNode = findDOMNode(this)
 
