@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Page = ({ style, children }) => (
-  <div style={{ ...styles, ...style }}>
+const Page = React.forwardRef(({ style, children }, ref) => (
+  <div ref={ref} style={{ ...styles, ...style }}>
     {children}
   </div>
-)
+));
 
 const styles = {
   width: '100%',
